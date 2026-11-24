@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaBank | Digital Banking</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo"><i class="fas fa-landmark"></i> NexaBank</h2>
+
+        <p class="menu-title">MENU</p>
+
+        <a href="#" class="nav active"><i class="fas fa-th-large"></i> Dashboard</a>
+        <a href="#" class="nav"><i class="fas fa-wallet"></i> My Accounts</a>
+        <a href="#" class="nav"><i class="fas fa-exchange-alt"></i> Transfers</a>
+        <a href="#" class="nav"><i class="fas fa-credit-card"></i> Cards</a>
+        <a href="#" class="nav"><i class="fas fa-file-invoice"></i> Transactions</a>
+
+        <p class="menu-title">GENERAL</p>
+
+        <a href="#" class="nav"><i class="fas fa-user"></i> Profile</a>
+        <a href="#" class="nav"><i class="fas fa-cog"></i> Settings</a>
+        <a href="#" class="nav"><i class="fas fa-question-circle"></i> Help Center</a>
+
+        <div class="sidebar-bottom">
+            <i class="fas fa-shield-alt"></i>
+            <div>
+                <strong>Your money is safe</strong>
+                <p>Bank securely with NexaBank.</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h2>Dashboard</h2>
+                <p>Welcome back, Yucee </p>
+            </div>
+
+            <div class="user-section">
+                <i class="far fa-bell notification"></i>
+                <div class="avatar">A</div>
+                <div>
+                    <strong>Onyebuchi Noble</strong>
+                    <p>Personal Account</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- BALANCE -->
+        <section class="balance-section">
+            <div class="balance-card">
+                <div class="balance-top">
+                    <span>Total Balance</span>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+
+                <h1 id="balance">₦2,450,000.00</h1>
+
+                <p class="account-number">
+                    Account Number: 0123456789
+                    <button onclick="copyAccount()" aria-label="Copy account number">
+                        <i class="far fa-copy"></i>
+                    </button>
+                </p>
+
+                <div class="balance-bottom">
+                    <span><i class="fas fa-arrow-up"></i> 12.8% this month</span>
+                    <span>**** 4589</span>
+                </div>
+            </div>
+
+            <div class="income-card">
+                <div class="small-icon"><i class="fas fa-arrow-down"></i></div>
+                <p>Total Income</p>
+                <h2>₦850,000</h2>
+                <span class="positive">+8.5% this month</span>
+            </div>
+
+            <div class="expense-card">
+                <div class="small-icon"><i class="fas fa-arrow-up"></i></div>
+                <p>Total Expenses</p>
+                <h2>₦320,000</h2>
+                <span class="negative">+3.2% this month</span>
+            </div>
+        </section>
+
+        <!-- QUICK ACTIONS -->
+        <section class="quick-actions">
+            <h3>Quick Actions</h3>
+
+            <div class="actions">
+                <button onclick="showMessage('Transfer feature coming soon!')">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Transfer</span>
+                </button>
+
+                <button onclick="showMessage('Add money feature coming soon!')">
+                    <i class="fas fa-plus"></i>
+                    <span>Add Money</span>
+                </button>
+
+                <button onclick="showMessage('Airtime purchase coming soon!')">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Buy Airtime</span>
+                </button>
+
+                <button onclick="showMessage('Bill payment feature coming soon!')">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <span>Pay Bills</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- TRANSACTIONS -->
+        <section class="transactions">
+            <div class="section-heading">
+                <h3>Recent Transactions</h3>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="transaction">
+                <div class="transaction-icon green">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="transaction-info">
+                    <strong>Salary Payment</strong>
+                    <p>Today, 09:30 AM</p>
+                </div>
+                <strong class="amount green-text">+₦250,000</strong>
+            </div>
+
+            <div class="transaction">
+                <div class="transaction-icon red">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <div class="transaction-info">
+                    <strong>Online Shopping</strong>
+                    <p>Yesterday, 02:15 PM</p>
+                </div>
+                <strong class="amount red-text">-₦45,000</strong>
+            </div>
+
+            <div class="transaction">
+                <div class="transaction-icon green">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="transaction-info">
+                    <strong>Transfer Received</strong>
+                    <p>Nov 18, 11:45 AM</p>
+                </div>
+                <strong class="amount green-text">+₦80,000</strong>
+            </div>
+
+            <div class="transaction">
+                <div class="transaction-icon red">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="transaction-info">
+                    <strong>Electricity Bill</strong>
+                    <p>Nov 17, 04:20 PM</p>
+                </div>
+                <strong class="amount red-text">-₦18,500</strong>
+            </div>
+        </section>
+
+        <footer>
+            © 2026 NexaBank. All rights reserved.
+        </footer>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
